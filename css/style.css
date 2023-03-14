@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --pink:#D911B8;
+    --violet:#3711BF;
+    --light-color: #E8E3FF;
+    --dark-violet: #0D0B59;
+    --dark-color: #000626;
+}
+.wrapper{
+    background-image: url(../img/rm251-mind-01-a.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.full-slider-wrap{
+    height: calc(50% + 4px);
+    background-image: linear-gradient(to right, #1C1072, #10082D, #9D0E8A);
+}
+.full-slider{
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+}
+.main-img img{
+    display: none;
+}
+img.show{
+    display: inline-block;
+}
+.thumbnails .single-img{
+    height: calc((100% / 5) - 10px);
+    overflow: hidden;
+}
+.single-img img{
+    object-fit: cover;
+    object-position: center;
+}
