@@ -8,11 +8,14 @@ function imgsGenerator(){
     mainImgWrap.innerHTML += mainImgs
     thumbnails.innerHTML += thumbImgs
     document.querySelector('#mainImgWrap img').classList.add('active')
+    document.querySelector('#mainImgWrap img.active').style.opacity = 1 ;
     document.querySelector('.single-img').classList.add('active')
 }
 function goNext(){
     document.querySelectorAll('#mainImgWrap img')[index].classList.remove('active');
     document.querySelectorAll('.single-img')[index].classList.remove('active');
+    document.querySelectorAll('#mainImgWrap img')[index].style.opacity = 0 ;
+
     if (index == imglist.length - 1){
         index = 0
     }else{
@@ -20,15 +23,23 @@ function goNext(){
     }
     document.querySelectorAll('#mainImgWrap img')[index].classList.add('active');
     document.querySelectorAll('.single-img')[index].classList.add('active');
+    setTimeout(() => {
+    document.querySelectorAll('#mainImgWrap img')[index].style.opacity = 1 ;
+    },100)
 }
 function goPrev(){
     document.querySelectorAll('#mainImgWrap img')[index].classList.remove('active');
     document.querySelectorAll('.single-img')[index].classList.remove('active');
+    document.querySelectorAll('#mainImgWrap img')[index].style.opacity = 0 ;
+
     if (index == 0){
         index = imglist.length - 1;
     }else{
         index--;
     }
     document.querySelectorAll('#mainImgWrap img')[index].classList.add('active');
+    setTimeout(() => {
+        document.querySelectorAll('#mainImgWrap img')[index].style.opacity = 1 ;
+        },100)
     document.querySelectorAll('.single-img')[index].classList.add('active');
 }
