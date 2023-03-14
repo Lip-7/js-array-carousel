@@ -17,7 +17,7 @@
 }
 /* full slider */
 .full-slider-wrap{
-    height: calc(50% + 4px);
+    height: calc(70% + 4px);
     background-image: linear-gradient(135deg, #1C107230, #10082D70, #9D0E8A30);
 }
 .full-slider{
