@@ -4,7 +4,25 @@ let mainImgs = '';
 let thumbImgs = '';
 const mainImgWrap = document.getElementById('mainImgWrap')
 const thumbnails = document.getElementById('thumbnails')
-
+let index = 0
 /* generate imgs */
 imgsGenerator()
 
+function goNext(){
+    document.querySelectorAll('#mainImgWrap img')[index].classList.remove('active');
+    if (index == imglist.length - 1){
+        index = 0
+    }else{
+        index++;
+    }
+    document.querySelectorAll('#mainImgWrap img')[index].classList.add('active');
+}
+function goPrev(){
+    document.querySelectorAll('.slide')[index].classList.remove('active');
+    if (index == 0){
+        index = images.length - 1;
+    }else{
+        index--;
+    }
+    document.querySelectorAll('.slide')[index].classList.add('active');
+}

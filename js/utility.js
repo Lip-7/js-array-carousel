@@ -7,4 +7,6 @@ function imgsGenerator(){
     }
     mainImgWrap.innerHTML += mainImgs
     thumbnails.innerHTML += thumbImgs
+    document.querySelector('#mainImgWrap img').classList.add('active')
+    document.querySelector('.single-img').classList.add('active')
 }
