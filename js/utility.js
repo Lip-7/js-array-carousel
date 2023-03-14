@@ -10,3 +10,25 @@ function imgsGenerator(){
     document.querySelector('#mainImgWrap img').classList.add('active')
     document.querySelector('.single-img').classList.add('active')
 }
+function goNext(){
+    document.querySelectorAll('#mainImgWrap img')[index].classList.remove('active');
+    document.querySelectorAll('.single-img')[index].classList.remove('active');
+    if (index == imglist.length - 1){
+        index = 0
+    }else{
+        index++;
+    }
+    document.querySelectorAll('#mainImgWrap img')[index].classList.add('active');
+    document.querySelectorAll('.single-img')[index].classList.add('active');
+}
+function goPrev(){
+    document.querySelectorAll('#mainImgWrap img')[index].classList.remove('active');
+    document.querySelectorAll('.single-img')[index].classList.remove('active');
+    if (index == 0){
+        index = imglist.length - 1;
+    }else{
+        index--;
+    }
+    document.querySelectorAll('#mainImgWrap img')[index].classList.add('active');
+    document.querySelectorAll('.single-img')[index].classList.add('active');
+}
