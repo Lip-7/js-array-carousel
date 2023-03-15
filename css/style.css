@@ -37,6 +37,12 @@ img.active{
     display: inline-block;
     transition: all 1s;
 }
+#mainImgWrap img:nth-child(3){
+    object-position: right;
+}
+#mainImgWrap img:nth-child(4){
+    object-position: right;
+}
 /* thumbnails */
 .thumbnails{
     width: calc(25% - 10px);
